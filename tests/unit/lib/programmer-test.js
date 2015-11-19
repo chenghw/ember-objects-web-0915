@@ -85,6 +85,7 @@ describe("Programmer", function(){
 
     it("is invalid unless it has firstName, lastName, age, and valid email", function(){
       let steven = Programmer.create();
+
       expect(steven.get('isInvalid')).to.eq(true);
       expect(steven.get('errors')).to.contains("firstName cannot be blank");
       expect(steven.get('errors')).to.contains("lastName cannot be blank");
